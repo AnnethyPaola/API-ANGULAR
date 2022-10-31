@@ -1,0 +1,49 @@
+<h3 class="text-center p-5  ">
+    <span class="text-muted ">Detalles</span>
+    <span style="color: blueviolet"> {{DatosAccount.accountNumber}} </span>
+    <hr>
+  </h3>
+
+  <div class="container">
+    <div class="row">
+      <div class=" col col-6 ">
+        <img src="assets/img/info1.png" alt="" class="img-fluid" alt="Responsive image" style="width:400px">
+      </div>
+      <div class="col">
+        <div class="row d-flex justify-content-center m-1">
+          <div class="input_container">
+            <div class="input_div">
+              <span >Account Number <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i></span>
+              <p>{{DatosAccount.accountNumber}}</p>
+            </div>
+            <div class="input_div">
+              <span >Acccount Type 
+                <i class="fa-sharp fa-solid fa-receipt"></i></span>
+               <p>{{DatosAccount.accountType}}</p>
+            </div>
+            <div class="input_div">
+              <span >Balance <i class="fa-solid fa-money-bill-transfer"></i></span>
+              <p>{{DatosAccount.balance}}</p>
+            </div>
+            <div class="input_div">
+              <span >User
+                <i class="fa-regular fa-user"></i>
+              </span>
+              <p>{{DatosAccount.userId}}</p>
+            </div>
+            <div class="input_div">
+              <span >Status
+                <i class="fa-solid fa-chart-line"></i>
+              </span>
+              <p>{{DatosAccount.status}}</p>
+            </div>
+            <div class="input_div">
+              <span >Created Date
+                <i class="fa-solid fa-calendar-days"></i>
+              </span>
+              <p>{{DatosAccount.createdAt}}</p>
+            </div>
+            </div>
+      </div>
+    </div>
+    </div>

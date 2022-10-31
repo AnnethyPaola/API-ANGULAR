@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-header">
+      <h4 class="text-center">{{menu.title}}</h4>
+    </div>
+    <div class="card-body" style="cursor:pointer;">
+      <img [src]="menu.img" (click)="goto(menu.route)" class="img-fluid" alt="">
+    </div>
+  </div>

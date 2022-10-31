@@ -1,0 +1,41 @@
+span{
+    color: blueviolet;
+    padding-right: 10px;
+    padding: 5px;
+    font-weight: 600;
+}
+h3{
+    margin-top: 20px;
+    text-align: center;
+}
+
+p{
+    border-bottom-style: solid; border-bottom-width: 2px;
+    border-color: blueviolet;
+    border-left: none; 
+    border-right: none;
+    border-top: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:hover{
+    border-bottom-style: solid; border-bottom-width: 4px;
+    cursor: pointer;
+}
+
+.input_div{
+    display: flex;
+    flex-direction:column;
+  }
+  
+  .input_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+ a i{
+    color: blueviolet;
+}
+

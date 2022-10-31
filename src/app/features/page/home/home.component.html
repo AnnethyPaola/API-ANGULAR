@@ -1,0 +1,23 @@
+<h3 class="text-center p-3">
+  <span class="text-muted ">Welcome to the </span>
+  <span style="color: purple">{{title}}</span>
+  <hr>
+</h3>
+
+<div class="container">
+  <div class="row">
+    <div class=" col col-4 ">
+      <img src="assets/img/f1.png" alt="" class="img-fluid" alt="Responsive image" style="width:300px">
+    </div>
+    <div class="col ">
+      <div class="row d-flex justify-content-center m-1">
+        <div class="col col-4  " *ngFor="let menu of menus" style="width:200px">
+          <app-menu-card [menu]="menu" class="img-fluid"  ></app-menu-card>
+        </div>
+    </div>
+  </div>
+  </div>
+
+
+  
+ 

@@ -1,0 +1,61 @@
+<h3 class="">
+  <a class="float-right"><i class="fa-solid fa-caret-left " ></i></a>
+  <span class="text-muted ">Details user :  </span>
+  <span style="color: blueviolet">{{DatosUser.firstName}} </span>
+  <hr>
+</h3>
+
+<div class="container">
+  <div class="row">
+    <div class=" col col-5 ">
+      <img src="assets/img/info.png" alt="" class="img-fluid" alt="Responsive image" style="width:400px">
+    </div>
+
+    <div class="col  ">
+       <div class="input_container">
+          <div class="input_div">
+            <span >First Name <i class="fa-regular fa-user"></i></span>
+            <p>{{DatosUser.firstName}}</p>
+          </div>
+          <div class="input_div">
+            <span >Last Name <i class="fa-sharp fa-solid fa-user"></i></span>
+             <p>{{DatosUser.lastName}}</p>
+          </div>
+          <div class="input_div">
+            <span >Email <i class="fa-solid fa-envelope"></i></span>
+            <p>{{DatosUser.email}}</p>
+          </div>
+          <div class="input_div">
+            <span >Phone Number <i class="fa-solid fa-phone"></i></span>
+            <p>{{DatosUser.phoneNumber}}</p>
+          </div>
+          <div class="input_div">
+            <span >Id Number <i class="fa-solid fa-hashtag"></i></span>
+            <p>{{DatosUser.idNumber}}</p>
+          </div>
+          <div class="input_div">
+            <span >Birth Date <i class="fa-solid fa-cake-candles"></i></span>
+            <p>{{DatosUser.birthDate}}</p>
+          </div>
+          </div>
+          <div class="input_container">
+            <h3>Address</h3>
+            <br> <br>
+          <div class="input_div">
+            <span >City <i class="fa-solid fa-city"></i></span>
+            <p>{{DatosUser.address.city}}</p>
+          </div>
+          <div class="input_div">
+            <span >Number <i class="fa-duotone fa-hashtag"></i></span>
+            <p>{{DatosUser.address.number}}</p>
+          </div>
+          <div class="input_div">
+            <span >State <i class="fa-solid fa-building-flag"></i></span>
+            <p>{{DatosUser.address.state}}</p>
+          </div>
+          <div class="input_div">
+            <span >Zip <i class="fa-light fa-hashtag"></i></span>
+            <p>{{DatosUser.address.zip}}</p>
+          </div>
+          </div>
+    
