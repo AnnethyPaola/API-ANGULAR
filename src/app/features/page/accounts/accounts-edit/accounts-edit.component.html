@@ -1,0 +1,56 @@
+<div class="row">
+    <h1 class="text-center p-3">Editar <strong style="color: blueviolet">cuenta bancaria</strong> </h1>
+    <div class="col-5">
+        <img src="assets/img/ca.png" class="img-fluid" alt="Responsive image" style="width:500px">
+    </div>
+    <div class="col-6">
+        <form class="p-3" [formGroup]="form1" (ngSubmit)="subtmit()">
+            <div class="row p-3">
+                <div class="col-8 col-md-6 ">
+                    <div class="input_div">
+                        <span>Numero de cuenta </span>
+                        <input type="text" formControlName="accountNumber" class="form-control" maxlength="10"
+                            oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    </div>
+                </div>
+                <div class="col-8 col-md-6">
+                    <div class="input_div input-group-prepend">
+                        <span>Tipo de cuenta </span>
+                        <select class="form-control" formControlName="accountType">
+                            <option *ngFor="let type of TypeAccount" [value]="type.key">{{type.value}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-8 col-md-6">
+                    <div class="input_div">
+                        <br>
+                        <span>Balance </span>
+                        <input type="number" formControlName="balance" class="form-control">
+                    </div>
+                </div>
+                <div class="col-8 col-md-6">
+                    <div class="input_div">
+                        <br>
+                        <span>Usuario </span>
+                        <select name="" id="" class="form-control" placeholder="usuarios" formControlName="userId">
+                            <option *ngFor="let user of users" value="{{user.id}}">{{user.firstName}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-20 col-md-19">
+                    <div class="input_div">
+                        <br>
+                        <span>Estado </span>
+                        <select class="form-control" formControlName="status">
+                            <option *ngFor="let status of Status" [value]="status.key">{{status.value}}</option>
+                        </select>
+                        
+                    </div>
+                    <br>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg btn-block">Guardar cuenta</button>
+            </div>
+
+        </form>
+    </div>
+</div>

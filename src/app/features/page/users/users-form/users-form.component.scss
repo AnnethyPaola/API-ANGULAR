@@ -1,0 +1,21 @@
+span{
+    color: blueviolet;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+button{
+    background-color:white;
+    border: 1px solid blueviolet;
+    color:blueviolet;
+    transition: background-color 1s;
+}
+
+
+button:hover{
+    background-color:blueviolet;
+    border: 1px solid white;
+    color:white;
+}

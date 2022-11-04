@@ -10,6 +10,6 @@ import { CrudService } from '../crud-service';
 export class UserService extends CrudService<user> {
 
   constructor(protected override http: HttpClient) {
-    super(http, `${environment.API}users`);
+    super(http, 'users');
   }
 }

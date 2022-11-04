@@ -1,61 +1,102 @@
-<h3 class="">
-  <a class="float-right"><i class="fa-solid fa-caret-left " ></i></a>
-  <span class="text-muted ">Details user :  </span>
-  <span style="color: blueviolet">{{DatosUser.firstName}} </span>
-  <hr>
-</h3>
-
-<div class="container">
+<div class="row">
   <div class="row">
-    <div class=" col col-5 ">
-      <img src="assets/img/info.png" alt="" class="img-fluid" alt="Responsive image" style="width:400px">
+    <div class="col-6 col-md-4">
+      <i class="bi bi-rewind-fill" (click)="Location()"></i>
     </div>
+    <div class="col">
+      <h1 class="text-center p-3">Informacion usuario: <strong style="color: blueviolet">{{DateUser.firstName}}</strong> </h1>
+    </div>
+    </div>
+  
+  <div class="col-5">
+    <img src="assets/img/info.png" alt="" class="img-fluid" alt="Responsive image" style="width:500px">
+  </div>
+  <div class="col-6">
+    <form class="">
+      <div class="row">
+        <div class="col-6 col-md-4 ">
+          <div class="input_div">
+            <br>
+            <span>Primer nombre </span>
+            <p>{{DateUser.firstName}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="input_div input-group-prepend">
+            <br>
+            <div class="input_div">
+              <span>Segundo nombre</span>
+              <p>{{DateUser.lastName}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <br>
+          <div class="input_div">
+            <span>Correo electrónico </span>
+            <p>{{DateUser.email}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <br>
+          <div class="input_div">
+            <span>Número telefónico </span>
+            <p>{{DateUser.phoneNumber}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <br>
+          <div class="input_div">
+            <span>Id Number</span>
+            <p>{{DateUser.idNumber}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <br>
+          <div class="input_div">
+            <span>Fecha de nacimiento </span>
+            <p>{{DateUser.birthDate}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <br>
+          <div class="input_div">
+            <span>Estado</span>
+            <p>{{DateUser.status | userStatus}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <br>
+          <div class="input_div">
+            <span>Calle </span>
+            <p>{{DateUser.address.street}}</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <br>
+          <div class="input_div">
+            <span>Ciudad </span>
+            <p>{{DateUser.address.city}}</p>
+          </div>
+        </div>
+        <div class="col-8 col-md-6">
+          <br>
+          <div class="input_div">
+            <span>Estado </span>
+            <p>{{DateUser.address.state}}</p>
+          </div>
+        </div>
+        <div class="col-8 col-md-6">
+          <br>
+          <div class="input_div">
+            <span>Codigo Zip </span>
+            <p>{{DateUser.address.zip}}</p>
+          </div>
+        </div>
+        <br>
+      </div>
+    </form>
+    <br> <br>
+  </div>
+</div>
 
-    <div class="col  ">
-       <div class="input_container">
-          <div class="input_div">
-            <span >First Name <i class="fa-regular fa-user"></i></span>
-            <p>{{DatosUser.firstName}}</p>
-          </div>
-          <div class="input_div">
-            <span >Last Name <i class="fa-sharp fa-solid fa-user"></i></span>
-             <p>{{DatosUser.lastName}}</p>
-          </div>
-          <div class="input_div">
-            <span >Email <i class="fa-solid fa-envelope"></i></span>
-            <p>{{DatosUser.email}}</p>
-          </div>
-          <div class="input_div">
-            <span >Phone Number <i class="fa-solid fa-phone"></i></span>
-            <p>{{DatosUser.phoneNumber}}</p>
-          </div>
-          <div class="input_div">
-            <span >Id Number <i class="fa-solid fa-hashtag"></i></span>
-            <p>{{DatosUser.idNumber}}</p>
-          </div>
-          <div class="input_div">
-            <span >Birth Date <i class="fa-solid fa-cake-candles"></i></span>
-            <p>{{DatosUser.birthDate}}</p>
-          </div>
-          </div>
-          <div class="input_container">
-            <h3>Address</h3>
-            <br> <br>
-          <div class="input_div">
-            <span >City <i class="fa-solid fa-city"></i></span>
-            <p>{{DatosUser.address.city}}</p>
-          </div>
-          <div class="input_div">
-            <span >Number <i class="fa-duotone fa-hashtag"></i></span>
-            <p>{{DatosUser.address.number}}</p>
-          </div>
-          <div class="input_div">
-            <span >State <i class="fa-solid fa-building-flag"></i></span>
-            <p>{{DatosUser.address.state}}</p>
-          </div>
-          <div class="input_div">
-            <span >Zip <i class="fa-light fa-hashtag"></i></span>
-            <p>{{DatosUser.address.zip}}</p>
-          </div>
-          </div>
-    

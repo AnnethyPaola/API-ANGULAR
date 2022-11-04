@@ -7,7 +7,7 @@ import { Menu } from 'src/app/shared/models/menu.models';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title = 'Bank Final';
+  title = 'Bank WordPress';
 
   menus:Menu[] = [
     {title:'User', img:'assets/img/user.png', route:'user/list'},

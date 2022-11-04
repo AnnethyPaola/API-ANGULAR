@@ -1,49 +1,110 @@
-<h3 class="text-center p-5  ">
-    <span class="text-muted ">Detalles</span>
-    <span style="color: blueviolet"> {{DatosAccount.accountNumber}} </span>
-    <hr>
-  </h3>
+<div class="row">
+  <div class="row">
+    <div class="col-6 col-md-4">
+      <i class="bi bi-rewind-fill" (click)="Location()"></i>
+    </div>
+    <div class="col">
+      <h1 class="text-center p-3">
+        <span class="text-muted ">Detalles cuenta</span>
+        <span style="color: blueviolet">{{DatosAccount.userId}} </span>
+      </h1>
+    </div>
+  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class=" col col-6 ">
+  <div class="col-5">
+    <img src="assets/img/info1.png" alt="" class="img-fluid" alt="Responsive image" style="width:500px">
+  </div>
+  <div class="col-6">
+    <form class="p-3">
+      <div class="row p-3">
+        <div class="col-8 col-md-6 ">
+          <div class="input_div">
+            <span>Numero de cuenta </span>
+            <p>{{DatosAccount.accountNumber}}</p>
+          </div>
+        </div>
+        <div class="col-8 col-md-6">
+          <div class="input_div input-group-prepend">
+            <span>Tipo de cuenta </span>
+            <p>{{DatosAccount.accountType | accountPipe}}</p>
+          </div>
+        </div>
+        <div class="col-8 col-md-6">
+          <div class="input_div">
+            <br>
+            <span>Balance </span>
+            <p>{{DatosAccount.balance}}</p>
+          </div>
+        </div>
+        <div class="col-8 col-md-6">
+          <div class="input_div">
+            <br>
+            <span>Usuario </span>
+            <p>{{DatosAccount.userId}}</p>
+          </div>
+        </div>
+        <div class="col-20 col-md-19">
+          <div class="input_div">
+            <br>
+            <span>Estado </span>
+            <p>{{DatosAccount.status | userStatus}}</p>      
+          </div>
+          <br>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<!-- <div class="row">
+  
+  <h1 class="text-center p-3">Cuenta bancaria usuario: <strong style="color: blueviolet">{{DatosAccount.userId}}</strong> </h1>
+  <div class="col-5">
         <img src="assets/img/info1.png" alt="" class="img-fluid" alt="Responsive image" style="width:400px">
+
+  </div>
+  <div class="col-6">
+    <form class="p-3">
+      <div class="row p-3">
+        <div class="col-8 col-md-6 ">
+          <div class="input_div">
+            <span>Numero de cuenta </span>
+            <p>{{DatosAccount.accountNumber}}</p>
+          </div>
+        </div>
+        <div class="col-8 col-md-6">
+          <div class="input_div input-group-prepend">
+            <span>Tipo de cuenta </span>
+            <p>{{DatosAccount.accountType | accountPipe}}</p>
+          </div>
+        </div>
+        <div class="col-8 col-md-6">
+          <div class="input_div">
+            <br>
+            <span>Balance </span>
+            <p>{{DatosAccount.balance}}</p>
+          </div>
+        </div>
+        <div class="col-8 col-md-6">
+          <div class="input_div">
+            <br>
+            <span>Usuario </span>
+            <p>{{DatosAccount.userId}}</p>
+          </div>
+        </div>
+        <div class="col-20 col-md-19">
+          <div class="input_div">
+            <br>
+            <span>Estado </span>
+            <p>{{DatosAccount.status | userStatus}}</p>           
+          </div>
+          <br>
+        </div>  
       </div>
-      <div class="col">
-        <div class="row d-flex justify-content-center m-1">
-          <div class="input_container">
-            <div class="input_div">
-              <span >Account Number <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i></span>
-              <p>{{DatosAccount.accountNumber}}</p>
-            </div>
-            <div class="input_div">
-              <span >Acccount Type 
-                <i class="fa-sharp fa-solid fa-receipt"></i></span>
-               <p>{{DatosAccount.accountType}}</p>
-            </div>
-            <div class="input_div">
-              <span >Balance <i class="fa-solid fa-money-bill-transfer"></i></span>
-              <p>{{DatosAccount.balance}}</p>
-            </div>
-            <div class="input_div">
-              <span >User
-                <i class="fa-regular fa-user"></i>
-              </span>
-              <p>{{DatosAccount.userId}}</p>
-            </div>
-            <div class="input_div">
-              <span >Status
-                <i class="fa-solid fa-chart-line"></i>
-              </span>
-              <p>{{DatosAccount.status}}</p>
-            </div>
-            <div class="input_div">
-              <span >Created Date
-                <i class="fa-solid fa-calendar-days"></i>
-              </span>
-              <p>{{DatosAccount.createdAt}}</p>
-            </div>
-            </div>
-      </div>
-    </div>
-    </div>
+    </form>
+  </div>
+</div>
+
+  -->

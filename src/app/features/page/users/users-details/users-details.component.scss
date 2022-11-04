@@ -1,41 +1,24 @@
-span{
+
+span {
     color: blueviolet;
-    padding-right: 10px;
     padding: 5px;
     font-weight: 600;
 }
-h3{
-    margin-top: 20px;
+
+h3,h1 {
+    margin-top: 10px;
     text-align: center;
 }
 
-p{
-    border-bottom-style: solid; border-bottom-width: 2px;
-    border-color: blueviolet;
-    border-left: none; 
-    border-right: none;
-    border-top: none;
+p {
+    border-radius: 10px;
     padding: 10px;
-    border-radius: 5px;
+    border: 2px solid #ccc;
 }
 
-input:hover{
-    border-bottom-style: solid; border-bottom-width: 4px;
+i{
+    font-size: 50px;
+    padding: 20px;
     cursor: pointer;
+    color: #992cd4;
 }
-
-.input_div{
-    display: flex;
-    flex-direction:column;
-  }
-  
-  .input_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-
- a i{
-    color: blueviolet;
-}
-

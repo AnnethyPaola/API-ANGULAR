@@ -1,1 +1,109 @@
-<p>users-form works!</p>
+<div class="row">
+    <h1 class="text-center p-3">Nuevo <strong style="color: blueviolet">usuario</strong> </h1>
+    <div class="col-5">
+        <img src="assets/img/userp.png" class="img-fluid" alt="Responsive image" style="width:800px">
+    </div>
+    <div class="col-6">
+        <form class="" [formGroup]="form" (ngSubmit)="subtmit()" >
+            <div class="row">
+                <div class="col-8 col-md-6 ">
+                        <div class="input_div">
+                            <br>
+                            <span>Nombre </span>
+                            <input type="text" formControlName="firstName" class="form-control">
+                        </div>
+                </div>
+                <div class="col-8 col-md-6">
+                    <div class="input_div input-group-prepend">
+                        <br>
+                        <div class="input_div">
+                            <span>Apellido</span>
+                            <input type="text" formControlName="lastName" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-md-6">
+                    <br>
+                    <div class="input_div">
+                        <span>Correo electrónico </span>
+                        <input type="text" formControlName="email" class="form-control">
+                    </div>
+                </div>
+                <div class="col-8 col-md-6">
+                    <br>
+                    <div class="input_div">
+                        <span>Número telefónico</span>
+                        <input type="text" formControlName="phoneNumber" class="form-control" maxlength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    </div>
+                </div>
+                <div class="col-8 col-md-6">
+                    <br>
+                    <div class="input_div">
+                        <span>Cédula</span>
+                        <input type="text" formControlName="idNumber" class="form-control" maxlength="9" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    </div>
+                </div>
+                <div class="col-8 col-md-6">
+                    <br>
+                    <div class="input_div">
+                        <span>Fecha nacimiento </span>
+                        <input type="date" formControlName="birthDate" class="form-control">
+                    </div>
+                </div>
+                <div class="col-14 col-md-12">
+                    <br>
+                    <div class="input_div">
+                        <span>Estado </span>
+                        <select class="form-control" formControlName="status">
+                            <option *ngFor="let userStatus of userStatus" [value]="userStatus.key">{{userStatus.value}}</option>
+                        </select>
+                    </div>
+                    <div>
+                       <div class="row" formGroupName="address">
+                        <div class="col-8 col-md-6">
+                            <br>
+                            <div class="input_div">
+                                <span>Calle </span>
+                                <input type="text" formControlName="street" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-6">
+                            <br>
+                            <div class="input_div">
+                                <span>Ciudad </span>
+                                <input type="text" formControlName="city" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <br>
+                            <div class="input_div">
+                                <span>Número </span>
+                                <input type="text" formControlName="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <br>
+                            <div class="input_div">
+                                <span>Estado </span>
+                            <input type="text" formControlName="state" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <br>
+                            <div class="input_div">
+                                <span>Codigo Zip </span>
+                                <input type="number" formControlName="zip" class="form-control">
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <br> 
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block p-3">Guardar cuenta</button>
+                <br>
+            </div>
+        </form> 
+        <br> <br>
+    </div>
+</div>
+

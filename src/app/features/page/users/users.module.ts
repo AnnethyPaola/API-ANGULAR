@@ -6,6 +6,8 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { UsersDetailsComponent } from './users-details/users-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CoreModule } from 'src/app/core/core.module';
+import { UsersEditComponent } from './users-edit/users-edit.component';
 
 
 
@@ -13,14 +15,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     UsersListComponent,
     UsersFormComponent,
-    UsersDetailsComponent
+    UsersDetailsComponent,
+    UsersEditComponent
   ],
   exports: [],
   imports: [
     CommonModule,
     UsersRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CoreModule
   ]
 })
 export class UsersModule { }

@@ -5,11 +5,15 @@ import { RouterModule } from "@angular/router";
 import { FeatureRoutingModule } from "./feature-routing.module";
 import { HomeComponent } from "./page/home/home.component";
 import { MenuCardComponent } from "./page/menu-card/menu-card.component";
+import { AuthComponent } from './auth/auth.component';
+
+
 
 @NgModule({
     declarations: [
         HomeComponent,
-        MenuCardComponent
+        MenuCardComponent,
+        AuthComponent
     ],
 
     imports: [

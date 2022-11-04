@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
+import {  ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/User-Services/user.service';
 import { user } from 'src/app/shared/models/users.models';
+import {Location} from '@angular/common'
 
 @Component({
   selector: 'app-users-details',
@@ -11,20 +11,25 @@ import { user } from 'src/app/shared/models/users.models';
 })
 export class UsersDetailsComponent implements OnInit {
 
-  DatosUser!: user;
+  DateUser!: user;
+  
 
   constructor(
     private activateRouter: ActivatedRoute,
-    private service: UserService
+    private service: UserService,
+    private location : Location
   ) { }
 
   ngOnInit() {
     let UserId = this.activateRouter.snapshot.paramMap.get('id');
     console.log(UserId);
     this.service.loadById(UserId).subscribe(data => {
-      this.DatosUser = data;
+      this.DateUser = data;
       console.log(data);
     })
-   
+    }
+
+    Location(){
+      this.location.back();
     }
 }

@@ -10,6 +10,6 @@ import { cards } from 'src/app/shared/models/cards.models';
 export class CardService extends CrudService<cards> {
 
   constructor(protected override http: HttpClient) {
-    super(http, `${environment.API}creditCards`);
+    super(http, 'creditCards');
    }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CardService } from 'src/app/services/cards-service/card.service';
 import { cards } from 'src/app/shared/models/cards.models';
+import {Location} from '@angular/common'
 
 @Component({
   selector: 'app-cards-details',
@@ -12,10 +13,12 @@ import { cards } from 'src/app/shared/models/cards.models';
 export class CardsDetailsComponent implements OnInit {
 
   DatosCards! : cards;
+ 
 
   constructor(
     private activateRouter: ActivatedRoute,
-    private service: CardService
+    private service: CardService, 
+    private location : Location
   ) { }
 
 ngOnInit() {
@@ -25,6 +28,9 @@ ngOnInit() {
       this.DatosCards = data;
       console.log(data);
   });
-  }
+}
 
+Location(){
+  this.location.back();
+}
 }
